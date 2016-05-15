@@ -2,6 +2,53 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic&subset=latin,latin-ext);
 
+
+/* stephstuf */
+/* colour of categories */
+.links {
+    color:#FF0000;
+}
+
+.sec {
+    color: #0088FF;
+}
+
+.art {
+    color: #ff82f2;
+}
+
+.unsorted {
+    color: #f071ff;
+}
+
+.meta {
+    color: #B6B6B6;
+}
+
+.ml {
+    color: #ff6a00;
+}
+
+.biomed {    color: #2ac100;
+}
+
+.lang {
+    color: #c060ed;
+}
+
+.tips {
+/*    color: #14cbb8;*/
+    color: #cbbc14;
+}
+
+.pages {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.apeirotope {
+    color: rgba(0, 0, 0, 0.75);
+}
+/* end stephstuf */
 html, body {
     margin: 0;
     padding: 0;
@@ -185,7 +232,7 @@ footer.index-footer {
 }
 footer.index-footer a {
     display: inline-block;
-    color: rgba(0, 0, 0, 0.3);
+/*    color: rgba(0, 0, 0, 0.3);*/
     font-size: 12px;
     margin-right: 16px;
     text-decoration: none;
@@ -194,6 +241,7 @@ footer.index-footer a:hover {
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.6);
 }
+
 
 div.post-meta img.post-avatar {
     max-width: 36px;
