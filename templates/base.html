@@ -5,9 +5,6 @@
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -76,7 +73,7 @@
         {% endif %}
         {% if DISPLAY_CATEGORIES_ON_MENU %}
         {% for cat, null in categories %}
-        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
+        <a href="{{ SITEURL }}/{{ cat.url }}" class="{{ cat }}">{{ cat }}</a>
         {% endfor %}
         {% endif %}
         {% for title, link in LINKS %}
@@ -85,6 +82,5 @@
 
     </footer>
 
-    {% include "analytics.html" %}
 </body>
 </html>
