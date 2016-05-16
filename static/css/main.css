@@ -100,16 +100,16 @@ div.post-content h1, div.post-content h2, div.post-content h3, div.post-content 
     font-weight: normal;
 }
 div.post-content h1, div.post-content h2, div.entry-content h1, div.entry-content h2 {
-    font-size: 36px;
-}
-div.post-content h3, div.entry-content h3 {
     font-size: 32px;
 }
+div.post-content h3, div.entry-content h3 {
+    font-size: 26px;
+}
 div.post-content h4, div.entry-content h4 {
-    font-size: 28px;
+    font-size: 22px;
 }
 div.post-content h5, div.post-content h6, div.entry-content h5, div.entry-content h6 {
-    font-size: 26px;
+    font-size: 20px;
 }
 div.post-content h3, div.post-content h4, div.post-content h5, div.post-content h6, div.entry-content h3, div.entry-content h4, div.entry-content h5, div.entry-content h6 {
     font-weight: 300;
@@ -459,7 +459,7 @@ div.article-header-container div.background-image-container div.background-image
 }
 @media screen and (min-width: 35.5em) {
     div.article-header-container div.background-image-container div.background-image-small div.title-container h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 }
 div.article-header-container div.background-image-container div.background-image-small div.title-container h4 {
@@ -812,6 +812,7 @@ pre {
 }
 
 code {
+    font-size: 16px;
     background-color: #F2F2F2;
     border-radius: 4px;
     padding: 2px 5px 0 5px;
