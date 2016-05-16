@@ -6,11 +6,11 @@
         <div class="post-meta pure-g">
             {% if article.category|string in MEDIUS_CATEGORIES %}
             <div class="pure-u">
-                <a href="{{ SITEURL }}/{{ article.category.url }}"><img src="{{ MEDIUS_CATEGORIES.get(article.category|string).thumbnail }} " class="post-avatar" alt="{{ article.category|striptags }}"></a>
+                <a href="{{ SITEURL }}/{{ article.category.url }}"><img src="{{ MEDIUS_CATEGORIES.get(article.category|string).thumbnail }} " class="post-avatar {{ category }}" alt="{{ article.category|striptags }}"></a>
             </div>
             {% endif %}
             <div class="pure-u-3-4 meta-data">
-                <a href="{{ SITEURL }}/{{ article.category.url }}" class="category">{{ article.category }}</a><br />
+                <a href="{{ SITEURL }}/{{ article.category.url }}" class="{{ category }}">{{ article.category }}</a><br />
 
                 {% for author in article.authors %}
                 <a class="author" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
@@ -98,7 +98,7 @@
                         <a href="{{ SITEURL }}/{{ article.category.url }}"><img src="{{ MEDIUS_CATEGORIES.get(article.category|string).thumbnail }}" alt=""></a>
                     </div>
                     <div class="pure-u-3-4">
-                        <h3 class="author-name"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
+                        <h3 class="author-name"><a href="{{ SITEURL }}/{{ article.category.url }}" class="{{ article.category }}">{{ article.category }}</a></h3>
                         <p class="author-description">
                           {{ MEDIUS_CATEGORIES.get(article.category|string).description }}
                         </p>

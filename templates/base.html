@@ -38,7 +38,7 @@
 <body>
 
     <div class="navigation pure-menu pure-menu-horizontal">
-        <a href="{{ SITEURL }}/" class="pure-menu-heading  pure-menu-link">{{ SITENAME }}</a>
+        <a href="{{ SITEURL }}/" class="pure-menu-heading  pure-menu-link apeirotope">{{ SITENAME }}</a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item"></li>
             {% for title, link in MENUITEMS %}
@@ -47,12 +47,12 @@
 
             {% if DISPLAY_PAGES_ON_MENU %}
             {% for p in pages %}
-            <li class="pure-menu-item{% if p == page %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}" class="pure-menu-link">{{ p.title }}</a></li>
+            <li class="pure-menu-item{% if p == page %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}" class="pure-menu-link pages">{{ p.title }}</a></li>
             {% endfor %}
             {% endif %}
             {% if DISPLAY_CATEGORIES_ON_MENU %}
             {% for cat, null in categories %}
-            <li class="pure-menu-item{% if cat == category %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}" class="pure-menu-link">{{ cat }}</a></li>
+            <li class="pure-menu-item{% if cat == category %} pure-menu-selected{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}" class="pure-menu-link {{ cat }}">{{ cat }}</a></li>
             {% endfor %}
             {% endif %}
         </ul>

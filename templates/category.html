@@ -6,7 +6,7 @@
         {% if category|string in MEDIUS_CATEGORIES and MEDIUS_CATEGORIES.get(category|string).logo %}
         <a href="{{ SITEURL }}/{{ category.url }}" rel="bookmark" title="Permalink to {{ category|striptags }}"><img src="{{ MEDIUS_CATEGORIES.get(category|string).logo }}" alt="{{ category|striptags }}"/></a>
         {% else %}
-        <h1><a href="{{ SITEURL }}/{{ category.url }}" rel="bookmark" title="Permalink to {{ category|striptags }}">{{ category }}</a></h1>
+        <h1><a href="{{ SITEURL }}/{{ category.url }}" rel="bookmark" title="Permalink to {{ category|striptags }}" class="{{ category }}">{{ category }}</a></h1>
         {% endif %}
     </div>
 
@@ -46,7 +46,7 @@
                    </div>
                    {% endif %}
                    <div class="pure-u-3-4 meta-data">
-                       <a href="{{ SITEURL }}/{{ author.url }}" class="category">{{ author }}</a><br />
+                       <a href="{{ SITEURL }}/{{ author.url }}" class="{{ article.category }}">{{ author }}</a><br />
                        &mdash; <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
                    </div>
                </div>
@@ -81,7 +81,7 @@
                 </div>
                 {% endif %}
                 <div class="pure-u-3-4 meta-data">
-                    <a href="{{ SITEURL }}/{{ author.url }}" class="category">{{ author }}</a><br />
+                    <a href="{{ SITEURL }}/{{ author.url }}" class="{{ article.category }}">{{ author }}</a><br />
                     &mdash; <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                 </div>
                 {% endif %}
                 <div class="pure-u-3-4 meta-data">
-                    <a href="{{ SITEURL }}/{{ author.url }}" class="category">{{ author }}</a><br />
+                    <a href="{{ SITEURL }}/{{ author.url }}" class="{{ article.category }}">{{ author }}</a><br />
                     &mdash; <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
                 </div>
             </div>
