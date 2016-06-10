@@ -59,6 +59,11 @@ a:hover {
 .apeirotope {
     color: rgba(0, 0, 0, 0.75);
 }
+
+.life {
+    color: #09a4a6;
+}
+
 /* end stephstuf */
 html, body {
     margin: 0;
